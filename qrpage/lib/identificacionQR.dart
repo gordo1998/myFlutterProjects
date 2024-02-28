@@ -14,7 +14,7 @@ class _IdentificacionQR extends State<IdentificacionQR> {
   Widget botonGoogle(){
     return ElevatedButton(
       onPressed: (){
-        
+
       }, 
       child: Image.asset("assets/google32.png")
     );
@@ -50,6 +50,7 @@ class _IdentificacionQR extends State<IdentificacionQR> {
               textoTitulo(),
               textoDesc(),
               botonGoogle(),
+              //Esto es una prueba
             ],        
           ),
         ),
