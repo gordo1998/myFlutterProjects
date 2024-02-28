@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import "package:qrpage/Colores.dart";
+import 'package:qrpage/creacionQR.dart';
 
 class IdentificacionQR extends StatefulWidget {
   const IdentificacionQR({super.key, required this.title});
@@ -14,9 +15,9 @@ class _IdentificacionQR extends State<IdentificacionQR> {
   Widget botonGoogle(){
     return ElevatedButton(
       onPressed: (){
-
+        Navigator.push(context, MaterialPageRoute(builder: (context) => CreacionQR()) );
       }, 
-      child: Image.asset("assets/google32.png")
+      child: Image.asset("assets/images/google32.png")
     );
   }
 
@@ -24,7 +25,7 @@ class _IdentificacionQR extends State<IdentificacionQR> {
     return Text(
       "Crea tu Qr aquí",
       style: TextStyle(
-        color: Colors.white
+        color: colores.blancoDos
       ),
     );
   }
@@ -33,7 +34,7 @@ class _IdentificacionQR extends State<IdentificacionQR> {
     return Text(
       "Te mandaremos un codigo a tu correo que deberás introducir para validarte",
       style: TextStyle(
-        color: Colors.white
+        color: colores.blancoDos
       ),
     );
   }
