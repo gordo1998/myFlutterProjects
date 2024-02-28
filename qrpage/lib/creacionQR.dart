@@ -59,17 +59,18 @@ class _CreacionQR extends State<CreacionQR> {
 
   Widget imagenQR(boolqr){
     if (boolqr){
-      return Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadiusGeometry.lerp(2, 0, 0)
-        ),
+      return ClipRRect(
+        borderRadius: BorderRadius.circular(15),
         child: Image.asset("assets/images/qr.png")
         );
     }else {
       return Container(
+        decoration: BoxDecoration(
+          color: colores.grisOscuroDos,
+          borderRadius: BorderRadius.circular(15),
+        ),
         width: 225,
         height: 225,
-        color: colores.grisOscuroDos,
       );
     }
   }
