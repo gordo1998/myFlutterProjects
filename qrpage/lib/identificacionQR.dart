@@ -12,6 +12,7 @@ class IdentificacionQR extends StatefulWidget {
 
 class _IdentificacionQR extends State<IdentificacionQR> {
   Colores colores = Colores();
+  
   Widget botonGoogle(){
     return ElevatedButton(
       onPressed: (){
@@ -46,13 +47,26 @@ class _IdentificacionQR extends State<IdentificacionQR> {
       backgroundColor: colores.negro,
       body: Center( 
         child: Container(
-          child: Column(
-            children: [
-              textoTitulo(),
-              textoDesc(),
-              botonGoogle(),
-              //Esto es una prueba
-            ],        
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            color: colores.grisIntermedio,
+          ),
+          
+          width: 400,
+          height: 300,
+          child: Padding(
+            padding: const EdgeInsets.all(30.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                textoTitulo(),
+                SizedBox(height: 30),
+                textoDesc(),
+                SizedBox(height: 50),
+                botonGoogle(),
+                //Esto es una prueba
+              ],        
+            ),
           ),
         ),
       ),
